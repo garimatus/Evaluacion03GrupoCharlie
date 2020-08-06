@@ -14,7 +14,15 @@
 #ifndef DEPENDENCIAS_H
 #define DEPENDENCIAS_H
 
+
+#include "asignatura.h"
+#include <vector>
+#include <fstream>
+
+
 void participantes();
+std::vector<asignatura> leer(std::istream&);
+
 
 #endif /* DEPENDENCIAS_H */
 

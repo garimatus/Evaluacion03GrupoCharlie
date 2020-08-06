@@ -50,15 +50,17 @@ CP=cp
 CCADMIN=CCadmin
 
 
-evaluacion03: directorios main.o funciones.o
-	g++ build/main.o build/funciones.o -o dist/evaluacion03
-	rm -fr build/*.o build
+evaluacion03: directorios main.o funciones.o asignatura.o
+	g++ build/main.o build/funciones.o build/asignatura.o -o dist/evaluacion03
 
 main.o:	main.cpp
 	g++ -c main.cpp -o build/main.o
 	
 funciones.o: dependencias/funciones.cpp dependencias/dependencias.h
 	g++ -c dependencias/funciones.cpp -o build/funciones.o
+
+asignatura.o: dependencias/asignatura.cpp dependencias/asignatura.h
+	g++ -c dependencias/asignatura.cpp -o build/asignatura.o
 
 directorios:
 	mkdir -p build dist
@@ -75,7 +77,7 @@ build: .build-post
 
 # clean
 clean: .clean-post
-	rm -fr dist/evaluacion03.* dist
+	rm -fr build/*.o dist/evaluacion03.*
 
 .clean-pre:
 # Add your pre 'clean' code here...

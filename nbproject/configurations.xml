@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>dependencias/asignatura.h</itemPath>
       <itemPath>dependencias/dependencias.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>dependencias/asignatura.cpp</itemPath>
       <itemPath>dependencias/funciones.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -40,6 +42,10 @@
       <compileType>
       </compileType>
       <item path=".gitignore" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dependencias/asignatura.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dependencias/asignatura.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dependencias/dependencias.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -69,6 +75,10 @@
         </asmTool>
       </compileType>
       <item path=".gitignore" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dependencias/asignatura.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dependencias/asignatura.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dependencias/dependencias.h" ex="false" tool="3" flavor2="0">
       </item>
