@@ -56,7 +56,7 @@ evaluacion03: directorios main.o funciones.o asignatura.o
 main.o:	main.cpp
 	g++ -c main.cpp -o build/main.o
 	
-funciones.o: dependencias/funciones.cpp dependencias/dependencias.h
+funciones.o: dependencias/funciones.cpp dependencias/dependencias.h dependencias/horario.h
 	g++ -c dependencias/funciones.cpp -o build/funciones.o
 
 asignatura.o: dependencias/asignatura.cpp dependencias/asignatura.h

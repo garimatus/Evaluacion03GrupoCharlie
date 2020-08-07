@@ -16,12 +16,16 @@
 
 
 #include "asignatura.h"
+#include "horario.h"
 #include <vector>
 #include <fstream>
 
 
 void participantes();
 std::vector<asignatura> leer(std::istream&);
+horario* greedy(std::vector<asignatura>);
+void escribir(horario*);
+
 
 
 #endif /* DEPENDENCIAS_H */

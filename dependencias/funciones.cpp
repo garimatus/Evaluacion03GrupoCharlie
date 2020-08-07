@@ -6,6 +6,7 @@
 
 #include "dependencias.h"
 #include "asignatura.h"
+#include "horario.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -16,11 +17,11 @@ using namespace std;
 
 
 void participantes() {
-    std::cout << std::endl << "=== Analisis de Algoritmos: Evaluacion 03 ===" << std::endl;
-    std::cout << std::endl << "Profesor : Sebastian Salazar M.\n";
+    std::cout << std::endl << "=== Análisis de Algoritmos: Evaluación 03 ===" << std::endl;
+    std::cout << std::endl << "Profesor : Sebastián Salazar M.\n";
 	std::cout << std::endl << "Integrantes : ";
 	std::cout << std::endl << "Edgar Matus";
-    std::cout << std::endl << "Oscar Penaloza";
+    std::cout << std::endl << "Oscar Peñaloza";
     std::cout << std::endl << "Daniela Galleguillos" << std::endl;
 }
 
@@ -58,4 +59,89 @@ std::vector<asignatura> leer(std::istream& archivo)
 	}
 	
 	return asignaturas;
+}
+
+
+bool criterio(asignatura prueba, horario* programacion)
+{
+	if (true)
+	{
+		return true;
+	}
+	
+	else
+	{
+		return false;
+	}
+}
+
+
+horario* greedy(std::vector<asignatura> pruebas)
+{
+	horario* progra = new horario[5];
+	
+	int n = 0;
+	
+	for (std::vector<asignatura>iterator it = pruebas.begin(); it != pruebas.end(); it++, n++)
+	{
+		asignatura mejor = pruebas.begin();
+		
+		std::string nombre(pruebas.at(n).getNombre());
+		
+		int index = 0;
+		
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				for (int k = 0; k < 5; k++)
+				{
+					if (criterio(pruebas.at(n), progra))
+					{
+						mejor = pruebas.at(n);
+					
+						index = n;
+					}
+				}
+			}
+		}
+		
+		pruebas.erase(index); /* implementar multi-asignación */
+	}
+	
+	return progra;
+}
+
+
+void escribir(horario* programacion)
+{
+	std::ofstream escritura;
+	
+	for (int i = 0; i < 5; i++)
+	{
+		escritura.open(std::string(programacion[i].sala)+".txt");
+		
+		for (int j = 0; j < 8; j++)
+		{
+			escritura << std::to_string(j+1);
+					
+			for (int k = 0; k < 5; k++)
+			{
+				if (programacion[i].bloques[j][k].getNombre() != '\0')
+				{
+				
+					escritura << std::string(programacion[i].bloques[j][k].getCodigo())+" - "+std::string(programacion[i].bloques[j][k].getNombre())+";";
+				}
+
+				else
+				{
+					escritura << ";";
+				}
+			}
+			
+			escritura << std::endl;
+		}
+		
+		escritura.close();
+	}
 }

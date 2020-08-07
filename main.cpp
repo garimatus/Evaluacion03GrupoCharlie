@@ -43,9 +43,15 @@ int main(int argc, char** argv) {
 				{
 					
 					vector<asignatura> ramos = leer(lectura);
-					/* Aquí ocurre la magia */
+					
+					horario* programacion = greedy(ramos);
+					
+					escribir(programacion);
+					
 				
 				}
+			
+				lectura.close();
 			}
 			
 			else
@@ -53,7 +59,6 @@ int main(int argc, char** argv) {
 				std::cout << "\nEl archivo no se reconoce con el nombre o extensión de 'ramos.csv'." << std::endl;
 				
 				return EXIT_FAILURE;
-				
 			}
 		}
 		
@@ -79,6 +84,6 @@ int main(int argc, char** argv) {
 		return EXIT_FAILURE;
 	}
 	
-	return 0;
+	return EXIT_SUCCESS;
 }
 

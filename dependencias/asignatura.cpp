@@ -9,9 +9,9 @@
 
 asignatura::asignatura()
 {
-	//semestre = "semestre";
-	//codigo = "código";
-	//nombre = "nombre";
+	semestre = '\0';
+	codigo = '\0';
+	nombre = '\0';
 }
 
 asignatura::asignatura(std::string num, std::string cod, std::string nom)

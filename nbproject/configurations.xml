@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>dependencias/asignatura.h</itemPath>
       <itemPath>dependencias/dependencias.h</itemPath>
+      <itemPath>dependencias/horario.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -51,6 +52,8 @@
       </item>
       <item path="dependencias/funciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="dependencias/horario.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -83,6 +86,8 @@
       <item path="dependencias/dependencias.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dependencias/funciones.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="dependencias/horario.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
