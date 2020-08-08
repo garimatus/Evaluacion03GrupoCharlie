@@ -55,23 +55,111 @@ std::vector<asignatura> leer(std::istream& archivo)
 	
 	for (std::string linea; getline(archivo, linea); a++)
 	{
-		asignaturas.push_back(getAsignatura(linea));
+		if (linea.substr(1,8) != "semestre")
+		{
+			asignaturas.push_back(getAsignatura(linea));
+		}
 	}
 	
 	return asignaturas;
 }
 
 
-bool criterio(asignatura prueba, horario* programacion)
+void criterio(asignatura prueba, horario* programacion)
 {
-	if (true)
+	bool tarde = false, mechon = false, mechonAM = false, mechonPM = false, paralela = false;
+	
+	int ventana = -1, sala, dia, bloque, contadorMechon = 0;
+	
+	if (std::string(prueba.getSemestre()) == "1" || std::string(prueba.getSemestre()) == "2")
+		mechon = true;
+	
+	/* criterio greedy */
+	
+	for (int i = 0; i < 5; i++)
+	{/* Una nueva sala */
+		for (int j = 0; j < 5; j++)
+		{/* Un nuevo día */
+			tarde = false;
+			
+			mechonAM = false;
+			
+			mechonPM = false;
+			
+			contadorMechon = 0;
+			
+			for (int k = 0; k < 8; k++)
+			{/* Un nuevo periodo */
+				if (k == 3)
+					tarde = true;
+				
+				if (std::string(prueba.getNombre()) == std::string(programacion[i].bloques[k][j].getNombre()))
+				{
+					paralela = true;
+					
+					bloque = k;
+					
+					dia = j;
+					
+					break;
+				}
+				
+				if (std::string(programacion[i].bloques[k][j].getSemestre()) == "1" ||
+					std::string(programacion[i].bloques[k][j].getSemestre()) == "2")
+				{
+					if (tarde)
+						mechonPM = true;
+					else
+						mechonAM = true;
+					
+					ventana = -1;
+					
+					contadorMechon++;
+				}
+				
+				if (std::string(programacion[i].bloques[k][j].getNombre()) == "sin asignar")
+				{
+					if (mechon)
+					{
+						if (mechonAM == false || mechonPM == false)
+						{
+							if (contadorMechon <= 2 && ventana >= 1)
+							{
+								sala = i;
+								dia = j;
+								bloque = k;
+							}
+						}
+						ventana++;
+					}
+					
+					else
+					{
+						sala = i;
+						dia = j;
+						bloque = k;
+					}
+				}
+			}
+		}
+	}
+	
+	if (!paralela)
 	{
-		return true;
+		programacion[sala].bloques[bloque][dia] = prueba;
 	}
 	
 	else
 	{
-		return false;
+		for (int sala = 0; sala < 5; sala++)
+		{
+			if (std::string(programacion[sala].bloques[bloque][dia].getNombre()) == "sin asignar")
+			{
+				programacion[sala].bloques[bloque][dia] = prueba;
+				
+				break;
+			}
+		}
 	}
 }
 
@@ -80,33 +168,17 @@ horario* greedy(std::vector<asignatura> pruebas)
 {
 	horario* progra = new horario[5];
 	
+	progra[0].sala = "M2-201";
+	progra[1].sala = "M2-202";
+	progra[2].sala = "M2-203";
+	progra[3].sala = "M2-204";
+	progra[4].sala = "M2-205";
+	
 	int n = 0;
 	
-	for (std::vector<asignatura>iterator it = pruebas.begin(); it != pruebas.end(); it++, n++)
+	for (std::vector<asignatura>::iterator it = pruebas.begin(); it != pruebas.end(); it++, n++)
 	{
-		asignatura mejor = pruebas.begin();
-		
-		std::string nombre(pruebas.at(n).getNombre());
-		
-		int index = 0;
-		
-		for (int i = 0; i < 5; i++)
-		{
-			for (int j = 0; j < 8; j++)
-			{
-				for (int k = 0; k < 5; k++)
-				{
-					if (criterio(pruebas.at(n), progra))
-					{
-						mejor = pruebas.at(n);
-					
-						index = n;
-					}
-				}
-			}
-		}
-		
-		pruebas.erase(index); /* implementar multi-asignación */
+		criterio(pruebas.at(n), progra);
 	}
 	
 	return progra;
@@ -121,22 +193,15 @@ void escribir(horario* programacion)
 	{
 		escritura.open(std::string(programacion[i].sala)+".txt");
 		
+		escritura << "Período;Lunes;Martes;Miércoles;Jueves;Viernes;\n";
+		
 		for (int j = 0; j < 8; j++)
 		{
-			escritura << std::to_string(j+1);
+			escritura << std::to_string(j+1)+" ";
 					
 			for (int k = 0; k < 5; k++)
 			{
-				if (programacion[i].bloques[j][k].getNombre() != '\0')
-				{
-				
-					escritura << std::string(programacion[i].bloques[j][k].getCodigo())+" - "+std::string(programacion[i].bloques[j][k].getNombre())+";";
-				}
-
-				else
-				{
-					escritura << ";";
-				}
+				escritura << std::string(programacion[i].bloques[j][k].getCodigo())+" - "+std::string(programacion[i].bloques[j][k].getNombre())+';';
 			}
 			
 			escritura << std::endl;

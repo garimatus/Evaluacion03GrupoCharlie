@@ -1,0 +1,9 @@
+Período;Lunes;Martes;Miércoles;Jueves;Viernes;
+1 "21071" - "Taller de Metrología, Máquinas y Herramientas";"21049" - "Grafos y Lenguajes Formales";"21071" - "Estructuras II";"21030" - "Circuitos Eléctricos";"21071" - "Instalaciones Eléctricas y de Gas";
+2 "21049" - "Sistemas Económicos";"21030" - "Electivo de Formación General";"21030" - "Estructuras Discretas";"21041" - "Bases de Datos";"21071" - "Estructuras I";
+3 "21041" - "Sistemas de Información";"21030" - "Análisis de Algoritmos";"21049" - "Estadística y Probabilidades";"21030" - "Base de Datos";"21041" - "Electromagnetismo";
+4 "21049" - "Sistemas de Bases de Datos";"21071" - "Taller de Maquetería";"21030" - "Estadística y Probabilidad";"21071" - "Topografía";"21049" - "Ecuaciones Diferenciales Clásicas";
+5 "21071" - "Proyecto de Matricería";"21049" - "Óptica y Ondas";"21071" - "Dibujo de Órganos de Máquinas";"21041" - "Sistemas de Administración";"21030" - "Ecuaciones Diferenciales";
+6 "21049" - "Procesamiento Digital de la Información";"21049" - "Métodos Numéricos Clásicos";"21071" - "Dibujo de Matricería";"21049" - "Mecánica para Ingeniería";"21071" - "Dibujo de Máquinas II";
+7 "21049" - "Optimización Heurística";"21041" - "Métodos Numéricos";"21071" - "Dibujo de Arquitectura III";"21030" - "Lenguajes de Programación";"21071" - "Dibujo de Arquitectura II";
+8 "21041" - "Inferencia y Procesos Estocásticos";"21049" - "Herramientas para Ciencia de Datos";"21071" - "Cubicación y Presupuestos";"21071" - "Instalaciones Sanitarias";"21049" - "Cálculo Avanzado";

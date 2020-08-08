@@ -1,0 +1,9 @@
+Período;Lunes;Martes;Miércoles;Jueves;Viernes;
+1 "21071" - "Resistencia de Materiales";"21071" - "Computación Aplicada al Dibujo";"21071" - "Diseño Asistido por Computador";"21041" - "Taller para el Desarrollo del Pensamiento Lógico Deductivo";"21030" - "Introducción a la Ingeniería en Informática";
+2 "21041" - "Mecánica Clásica";"21041" - "Cálculo Integral";"21071" - "Dibujo Técnico II";"21049" - "Taller para el Desarrollo del Pensamiento Lógico";"21041" - "Introducción a la Ingeniería en Computación";
+3 "21049" - "Fundamentos de Ciencia de Datos";"21030" - "Álgebra Superior";"21030" - "Dibujo de Ingeniería";"21030" - "Taller de Principios de Sustentabilidad";"21049" - "Introducción a la Ingeniería de Datos";
+4 "21030" - "Estructuras de Datos";"21041" - "Taller de Ciencia y Tecnología";"21071" - "Construcción I";"21049" - "Taller de Matemáticas";"21049" - "Inglés I";
+5 "21041" - "Electivo de Formación Deportiva";"21071" - "Matemáticas II";"21049" - "Cálculo Diferencial";"21030" - "Taller de Matemática";"21071" - "Historia del Arte";
+6 "21071" - "Dibujo de Máquinas I";"21049" - "Inglés II";"21049" - "Algoritmos y Programación";"21030" - "Taller de Comunicación Efectiva";"21071" - "Geometría Plana I";
+7 "21071" - "Dibujo de Arquitectura I";"21071" - "Geometría Plana II";"21030" - "Álgebra Clásica";"21030" - "Química General";"21071" - "Estática";
+8 "21071" - "Construcción II";"21071" - "Geometría Descriptiva";"21071" - "Tecnología de los Materiales";"21071" - "Matemáticas I";"21071" - "Dibujo Técnico I";

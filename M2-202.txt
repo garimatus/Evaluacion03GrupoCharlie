@@ -1,0 +1,9 @@
+Período;Lunes;Martes;Miércoles;Jueves;Viernes;
+1 sin asignar - sin asignar;"21049" - "Electivo de Formación Especializada I";sin asignar - sin asignar;"21049" - "Circuitos Eléctricos";"21041" - "Auditoría de Sistemas y Seguridad Informática";
+2 "21030" - "Mecánica Clásica";"21049" - "Cálculo Integral";sin asignar - sin asignar;"21041" - "Inteligencia de Negocios";"21041" - "Investigación de Operaciones";
+3 sin asignar - sin asignar;"21049" - "Álgebra Superior";"21041" - "Estadística y Probabilidades";"21049" - "Inteligencia Competitiva";"21049" - "Electromagnetismo";
+4 "21041" - "Estructuras de Datos";"21030" - "Taller de Ciencia y Tecnología";"21049" - "Electivo de Formación Especializada III";"21041" - "Gestión de Recursos Informáticos";"21041" - "Inglés I";
+5 "21030" - "Electivo de Formación Deportiva";"21030" - "Óptica y Ondas";"21041" - "Cálculo Diferencial";"21041" - "Gestión de Proyectos Informáticos";"21030" - "Evaluación de Proyectos";
+6 sin asignar - sin asignar;"21030" - "Métodos Numéricos Clásicos";"21030" - "Algoritmos y Programación";"21049" - "Taller de Comunicación Efectiva";"21049" - "Aplicaciones de Inteligencia Artificial";
+7 sin asignar - sin asignar;sin asignar - sin asignar;"21041" - "Álgebra Clásica";"21041" - "Química General";"21049" - "Analítica";
+8 "21041" - "Electivo de Formación Especializada II";sin asignar - sin asignar;"21041" - "Minería de Datos";"21049" - "Gestión de Proyectos en Ciencia de Datos";"21041" - "Cálculo Avanzado";

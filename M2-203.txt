@@ -1,0 +1,9 @@
+Período;Lunes;Martes;Miércoles;Jueves;Viernes;
+1 "21049" - "Sistemas de Inf. en ambientes Big Data";"21030" - "Electivo de Formación Especializada I";"21030" - "Taller de Sistemas de Software";"21049" - "Electivo de Formación General I";"21049" - "Machine Learning";
+2 "21041" - "Sistemas Económicos";"21030" - "Desempeño de Sistemas Computacionales";"21041" - "Taller de Sistemas de Información";"21049" - "Deep Learning";"21030" - "Investigación de Operaciones";
+3 "21049" - "Procesamiento de Lenguaje Natural";"21049" - "Análisis de Algoritmos";"21030" - "Taller de Innovación y Emprendimiento";"21049" - "Visualización de Datos";"21041" - "Ingeniería de Software";
+4 "21041" - "Optimización de Sistemas";"21041" - "Desempeño de Sistemas";"21030" - "Sistemas Operativos";"21030" - "Termodinámica para Ingeniería";"21049" - "Infraestructura para Ciencia de Datos";
+5 "21049" - "Metodología de Investigación en Ciencia de Datos";"21049" - "Computación Paralela y Distribuida";"21049" - "Redes y Comunicación de Datos";"21041" - "Teoría de Sistemas";"21049" - "Evaluación de Proyectos";
+6 "21041" - "Gestión de Procesos de Negocios";"21041" - "Inglés II";"21041" - "Principios de Sustentabilidad";"21030" - "Mecánica para Ingeniería";"21041" - "Arquitectura de Computadores";
+7 "21049" - "Electivo de Formación General II";"21049" - "Big Data";"21049" - "Ingeniería Ambiental";"21049" - "Lenguajes de Programación";"21030" - "Tecnología de equipos";
+8 "21030" - "Electivo de Formación Especializada II";"21030" - "Auditoría y Seguridad Informática";"21041" - "Evaluación de Proyectos Informáticos";"21030" - "Simulación de Sistemas";"21041" - "Tecnología de Computadores";

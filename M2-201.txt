@@ -1,0 +1,9 @@
+Período;Lunes;Martes;Miércoles;Jueves;Viernes;
+1 sin asignar - sin asignar;"21041" - "Grafos y Lenguajes Formales";sin asignar - sin asignar;"21041" - "Circuitos Eléctricos";sin asignar - sin asignar;
+2 "21049" - "Mecánica Clásica";"21030" - "Cálculo Integral";"21030" - "Taller de Sistemas de Información";"21030" - "Taller para el Desarrollo del Pensamiento Lógico";"21049" - "Investigación de Operaciones";
+3 "21030" - "Sistemas de Información";"21041" - "Álgebra Superior";"21041" - "Dibujo de Ingeniería";"21049" - "Taller de Principios de Sustentabilidad";"21030" - "Electromagnetismo";
+4 "21049" - "Estructuras de Datos";"21049" - "Taller de Ciencia y Tecnología";"21041" - "Sistemas Operativos";sin asignar - sin asignar;"21030" - "Inglés I";
+5 "21049" - "Electivo de Formación Deportiva";"21041" - "Óptica y Ondas";"21030" - "Cálculo Diferencial";"21041" - "Taller de Matemática";"21041" - "Ecuaciones Diferenciales";
+6 sin asignar - sin asignar;"21030" - "Inglés II";"21041" - "Algoritmos y Programación";"21041" - "Taller de Comunicación Efectiva";"21030" - "Arquitectura de Computadores";
+7 sin asignar - sin asignar;sin asignar - sin asignar;"21049" - "Álgebra Clásica";"21049" - "Química General";sin asignar - sin asignar;
+8 "21049" - "Electivo de Formación Especializada II";sin asignar - sin asignar;"21049" - "Evaluación de Proyectos Informáticos";"21041" - "Simulación de Sistemas";"21030" - "Cálculo Avanzado";
