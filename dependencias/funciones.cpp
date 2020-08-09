@@ -125,15 +125,38 @@ void criterio(asignatura prueba, horario* programacion)
 			{
 				if (contadorMechon < 2)
 				{
+					tarde = false;
+					
 					for (int k = 0; k < 8; k++)
 					{
+						if (k >= 3)
+							tarde = true;
+						
 						if (std::string(programacion[i].bloques[k][j].getNombre()) == "sin asignar")
 						{
-							sala = i;
-							dia = j;
-							bloque = k;
+							if (mechonAM == false && mechonPM == false)
+							{
+								sala = i;
+								dia = j;
+								bloque = k;
+							}
 							
-							break;
+							else
+							{
+								if (mechonAM == true && tarde == true)
+								{
+									sala = i;
+									dia = j;
+									bloque = k;
+								}
+	
+								if (mechonPM == true && tarde == false)
+								{
+									sala = i;
+									dia = j;
+									bloque = k;
+								}
+							}
 						}
 					}
 				}
@@ -148,15 +171,13 @@ void criterio(asignatura prueba, horario* programacion)
 						sala = i;
 						dia = j;
 						bloque = k;
-					
-						break;
 					}
 				}	
 			}
 		}
 	}
 	
-	if (paralela == false)
+	if (!paralela)
 	{
 		programacion[sala].bloques[bloque][dia] = prueba;
 	}
