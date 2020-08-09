@@ -36,6 +36,8 @@ asignatura getAsignatura(std::string linea)
 	
 	while (getline(ss, item, ';')) {
 		
+		item = item.substr(1,item.length()-2);
+		
 		columnas[i] = item;
 		
 		i++;
@@ -67,9 +69,9 @@ std::vector<asignatura> leer(std::istream& archivo)
 
 void criterio(asignatura prueba, horario* programacion)
 {
-	bool tarde = false, mechon = false, mechonAM = false, mechonPM = false, paralela = false;
+	bool mechon = false, tarde, mechonAM, mechonPM, paralela = false;
 	
-	int ventana = -1, sala, dia, bloque, contadorMechon = 0;
+	int ventana = -1, sala, dia, bloque, contadorMechon;
 	
 	if (std::string(prueba.getSemestre()) == "1" || std::string(prueba.getSemestre()) == "2")
 		mechon = true;
@@ -88,9 +90,11 @@ void criterio(asignatura prueba, horario* programacion)
 			
 			contadorMechon = 0;
 			
+			ventana = 0;
+			
 			for (int k = 0; k < 8; k++)
 			{/* Un nuevo periodo */
-				if (k == 3)
+				if (k >= 3)
 					tarde = true;
 				
 				if (std::string(prueba.getNombre()) == std::string(programacion[i].bloques[k][j].getNombre()))
@@ -112,39 +116,47 @@ void criterio(asignatura prueba, horario* programacion)
 					else
 						mechonAM = true;
 					
-					ventana = -1;
-					
 					contadorMechon++;
 				}
-				
-				if (std::string(programacion[i].bloques[k][j].getNombre()) == "sin asignar")
+				ventana++;
+			}
+			
+			if (mechon)
+			{
+				if (contadorMechon < 2)
 				{
-					if (mechon)
+					for (int k = 0; k < 8; k++)
 					{
-						if (mechonAM == false || mechonPM == false)
+						if (std::string(programacion[i].bloques[k][j].getNombre()) == "sin asignar")
 						{
-							if (contadorMechon <= 2 && ventana >= 1)
-							{
-								sala = i;
-								dia = j;
-								bloque = k;
-							}
+							sala = i;
+							dia = j;
+							bloque = k;
+							
+							break;
 						}
-						ventana++;
 					}
-					
-					else
+				}
+			}
+
+			else
+			{
+				for (int k = 0; k < 8; k++)
+				{
+					if (std::string(programacion[i].bloques[k][j].getNombre()) == "sin asignar")
 					{
 						sala = i;
 						dia = j;
 						bloque = k;
+					
+						break;
 					}
-				}
+				}	
 			}
 		}
 	}
 	
-	if (!paralela)
+	if (paralela == false)
 	{
 		programacion[sala].bloques[bloque][dia] = prueba;
 	}
@@ -173,14 +185,14 @@ horario* greedy(std::vector<asignatura> pruebas)
 	progra[2].sala = "M2-203";
 	progra[3].sala = "M2-204";
 	progra[4].sala = "M2-205";
-	
+
 	int n = 0;
-	
+
 	for (std::vector<asignatura>::iterator it = pruebas.begin(); it != pruebas.end(); it++, n++)
 	{
 		criterio(pruebas.at(n), progra);
 	}
-	
+
 	return progra;
 }
 
@@ -209,4 +221,6 @@ void escribir(horario* programacion)
 		
 		escritura.close();
 	}
+	
+	std::cout << "\nArchivos de texto plano .txt generados en la carpeta del proyecto." << std::endl;
 }
