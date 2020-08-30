@@ -55,7 +55,6 @@ int main(int argc, char** argv) {
 					auto tiempo = chrono::duration_cast<chrono::nanoseconds>(fin - inicio).count();
 				
 					std::cout << "\nSe demoró " << tiempo*(0.000000001) << "[segs] generar una programación para la semana de pruebas." << std::endl;
-				
 				}
 			
 				lectura.close();
